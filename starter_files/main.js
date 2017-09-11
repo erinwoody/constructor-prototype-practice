@@ -7,10 +7,25 @@
 //            /____/
 
 // Dog Constructor & Prototype
-function Dog () {}
+function Dog(status, color, hungry, owner) {
+    this.status = status;
+    this.color = color;
+    this.hungry = hungry;
+    this.owner = owner;
+
+}
 
 // Instances of Dog
 // Needed: sadie, moonshine, atticus
+
+let sadie = new Dog("normal", "black", false, "mason");
+
+let moonshine = new Dog(undefined, undefined, true);
+
+let atticus = new Dog();
+
+
+
 
 //     __
 //    / /_  __  ______ ___  ____ _____  _____
@@ -19,7 +34,21 @@ function Dog () {}
 // /_/ /_/\__,_/_/ /_/ /_/\__,_/_/ /_/____/
 
 // Human Constructor & Prototype
-function Human () {}
+function Human(cool) {
+    this.cool = cool;
+
+    this.pet = function (dog) {
+        dog.status = "happy";
+    }
+    this.feed = function (dog) {
+        dog.hungry = false;
+    }
+}
 
 // Instances of Human
 // Needed: mason, julia
+
+let mason = new Human(false);
+
+
+let julia = new Human(true);
